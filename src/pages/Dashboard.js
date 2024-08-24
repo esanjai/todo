@@ -2,7 +2,7 @@ import "../styles/dashboard.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { TaskForm } from "../components/TaskForm";
-import { Task } from "../components/Task";
+import { Task } from "../components/Task.js";
 import { API_URL } from "../config/global";
 export default function Dashboard() {
   const [tasks, setTasks] = useState([]);
@@ -56,7 +56,7 @@ export default function Dashboard() {
         <TaskForm addTask={addTask} />
       </div>
       <div className="task-list">
-        {task.length ? (
+        {tasks.length ? (
           tasks
             .slice()
             .reverse()

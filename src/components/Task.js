@@ -37,6 +37,6 @@ export const Task = ({ task, updateTask, deleteTask }) => {
   );
 };
 Task.proTypes = {
-  task: propTypes.string,
-  deleteTask: propTypes.func.isRequired,
+  task: PropTypes.string,
+  deleteTask: PropTypes.func.isRequired,
 };
